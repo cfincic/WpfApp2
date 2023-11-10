@@ -27,7 +27,7 @@ namespace WpfApp2
 
         private void botonazo_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Saraza loca");
+            MessageBox.Show("Se la lastra");
         }
     }
 }
