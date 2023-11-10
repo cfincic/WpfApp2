@@ -24,5 +24,10 @@ namespace WpfApp2
         {
             InitializeComponent();
         }
+
+        private void botonazo_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Saraza loca");
+        }
     }
 }
