@@ -29,5 +29,12 @@ namespace WpfApp2
         {
             MessageBox.Show("Se la lastra");
         }
+
+        private void boton_Click(object sender, RoutedEventArgs e)
+        {
+            Random random = new Random();
+
+            boton.Background = new SolidColorBrush(Color.FromArgb(255, (byte)random.Next(255), (byte)random.Next(255), (byte)random.Next(255)));
+        }
     }
 }

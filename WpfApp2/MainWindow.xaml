@@ -7,6 +7,63 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="botonazo" Content="Omarcito" Click="botonazo_Click"></Button>
+        <Button x:Name="botonazo" Content="Omarcito" Click="botonazo_Click" Margin="0,0,400,225"></Button>
+
+        <Button x:Name="boton" Content="Botón" HorizontalAlignment="Left" Height="53" Width="100" Margin="521,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="boton_Click" Background="#FFD24444" >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Green"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Boton" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="Height" To= "80" Duration="0:0:0.3" AutoReverse="True"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Width" To= "120" Duration="0:0:0.3" AutoReverse="True"/>
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+                            </Trigger.EnterActions>
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="Height" To= "80" Duration="0:0:0.3" AutoReverse="True"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Width" To= "120" Duration="0:0:0.3" AutoReverse="True"/>
+
+                                    </Storyboard>
+                                </BeginStoryboard>
+
+                            </Trigger.EnterActions>
+                        </Trigger>
+
+
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-36.338"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>
