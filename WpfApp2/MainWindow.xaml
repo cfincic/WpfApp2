@@ -65,5 +65,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Label Content="ESTO ES UN LABEL o sea ETIQUETA" HorizontalAlignment="Left" Margin="119,247,0,0" VerticalAlignment="Top" Width="209"/>
+        <Image x:Name="fotito" HorizontalAlignment="Left" Height="76" Margin="442,279,0,0" VerticalAlignment="Top" Width="259" Source="/logo.jpg" Stretch="None"/>
+
     </Grid>
 </Window>
